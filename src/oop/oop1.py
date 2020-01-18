@@ -20,40 +20,33 @@
 
 
 class Vehicle:
-    def __init__(self, class_type):
-        self.class_type = class_type
-# Base class
+    def __init__(self):
+        # Base class
 
+    class FlightVehicle(Vehicle):
+        def __init__(self):
+            super().__init__()
+            self.mode = mode
 
-class FlightVehicle(Vehicle):
-    def __init__(self, class_type, mode):
-        super().__init__(class_type)
-        self.mode = mode
+        class Starship(FlightVehicle):
+            def __init__(self):
+                super().__init__()
+                self.space_bound = True
 
+        class Airplane(FlightVehicle):
+            def __init__(self):
+                super().__init__()
 
-class Starship(FlightVehicle):
-    def __init__(self, class_type, mode, space_bound):
-        super().__init__(class_type, mode)
-        self.space_bound = True
+    class GroundVehicle(Vehicle):
+        def __init__(self):
+            super().__init__()
+            self.mode = "ground"
+            self.wheels = wheels
 
+        class Car(GroundVehicle):
+            def __init__(self):
+                super().__init__(, wheels)
 
-class Airplane(FlightVehicle):
-    def __init__(self, class_type, mode):
-        super().__init__(class_type, mode)
-
-
-class GroundVehicle(Vehicle):
-    def __init__(self, class_type, mode, wheels):
-        super().__init__(class_type)
-        self.mode = "ground"
-        self.wheels = wheels
-
-
-class Car(GroundVehicle):
-    def __init__(self, class_type, mode):
-        super().__init__(class_type, mode, wheels)
-
-
-class Motorcycle(GroundVehicle):
-    def __init__(self, class_type, mode):
-        super().__init__(class_type, mode, wheels)
+        class Motorcycle(GroundVehicle):
+            def __init__(self):
+                super().__init__(, wheels)
