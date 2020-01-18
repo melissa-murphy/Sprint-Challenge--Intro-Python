@@ -40,3 +40,20 @@ class Starship(FlightVehicle):
 class Airplane(FlightVehicle):
     def __init__(self, class_type, mode):
         super().__init__(class_type, mode)
+
+
+class GroundVehicle(Vehicle):
+    def __init__(self, class_type, mode, wheels):
+        super().__init__(class_type)
+        self.mode = "ground"
+        self.wheels = wheels
+
+
+class Car(GroundVehicle):
+    def __init__(self, class_type, mode):
+        super().__init__(class_type, mode, wheels)
+
+
+class Motorcycle(GroundVehicle):
+    def __init__(self, class_type, mode):
+        super().__init__(class_type, mode, wheels)
