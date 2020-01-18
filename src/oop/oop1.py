@@ -29,3 +29,9 @@ class FlightVehicle(Vehicle):
     def __init__(self, class_type, mode):
         super().__init__(class_type)
         self.mode = mode
+
+
+class Starship(FlightVehicle):
+    def __init__(self, class_type, mode, space_bound):
+        super().__init__(class_type, mode)
+        self.space_bound = True
