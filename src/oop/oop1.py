@@ -20,33 +20,23 @@
 
 
 class Vehicle:
-    def __init__(self):
-        # Base class
+    pass
+    # Base class
 
-    class FlightVehicle(Vehicle):
-        def __init__(self):
-            super().__init__()
-            self.mode = mode
+class FlightVehicle(Vehicle):
+        pass
 
-        class Starship(FlightVehicle):
-            def __init__(self):
-                super().__init__()
-                self.space_bound = True
+class Starship(FlightVehicle):
+            pass
 
-        class Airplane(FlightVehicle):
-            def __init__(self):
-                super().__init__()
+class Airplane(FlightVehicle):
+            pass
 
-    class GroundVehicle(Vehicle):
-        def __init__(self):
-            super().__init__()
-            self.mode = "ground"
-            self.wheels = wheels
+class GroundVehicle(Vehicle):
+        pass
 
-        class Car(GroundVehicle):
-            def __init__(self):
-                super().__init__(, wheels)
+class Car(GroundVehicle):
+            pass
 
-        class Motorcycle(GroundVehicle):
-            def __init__(self):
-                super().__init__(, wheels)
+class Motorcycle(GroundVehicle):
+            pass
