@@ -1,6 +1,5 @@
 import math
 import re
-
 # The following list comprehension exercises will make use of the
 # defined Human class.
 
@@ -26,12 +25,16 @@ humans = [
     Human("Igon", 41),
     Human("David", 31),
 ]
-
+print(humans)
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
+# for h in humans
+# if name[0] == "D"
+# else pass
 print("Starts with D:")
 a = [human.name for human in humans if human.name[0] == "D"]
 print(a)
+
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
@@ -45,6 +48,7 @@ print("Starts between C and G, inclusive:")
 c = [human.name for human in humans if re.match('^[C-G]', human.name)]
 print(c)
 
+
 # Write a list comprehension that creates a list of all the ages plus 10.
 print("Ages plus 10:")
 d = [human.age+10 for human in humans]
@@ -53,21 +57,21 @@ print(d)
 # Write a list comprehension that creates a list of strings which are the name
 # joined to the age with a hyphen, for example "David-31", for all humans.
 print("Name hyphen age:")
-e = [f"{human.name} - {human.age}" for human in humans]
+e = [f"{human.name}-{human.age}" for human in humans]
 print(e)
 
 # Write a list comprehension that creates a list of tuples containing name and
 # age, for example ("David", 31), for everyone between the ages of 27 and 32,
 # inclusive.
 print("Names and ages between 27 and 32:")
-f = [f"{human.name} - {human.age}" for human in humans if 27 <= human.age <= 32]
+f = [(human.name, human.age, ) for human in humans if 27 <= human.age <= 32]
 print(f)
 
 # Write a list comprehension that creates a list of new Humans like the old
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 print("All names uppercase:")
-g = [f"<Human: {human.name.upper()}, {human.age+5}>" for human in humans]
+g = [(human.name.upper(), human.age+5, ) for human in humans]
 print(g)
 
 # Write a list comprehension that contains the square root of all the ages.
